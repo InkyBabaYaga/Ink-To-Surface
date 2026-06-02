@@ -1,4 +1,30 @@
-/* --- Water Theme --- */
+/* =========================================
+   THE LEXICON: VISUALS & THEMES
+   Table of Contents:
+   0. Global Visual Tweaks
+   1. POEMS - LETTER A
+   2. POEMS - LETTER B (Coming Soon)
+   3. POEMS - LETTER C (Coming Soon)
+========================================= */
+
+
+/* =========================================
+   0. GLOBAL VISUAL TWEAKS
+   (Rules that apply to all SVG illustrations)
+========================================= */
+
+.poem-visual {
+    text-align: center;      
+    margin-bottom: 30px;     
+    opacity: 0.8;            
+}
+
+
+/* =========================================
+   1. POEMS - LETTER A
+========================================= */
+
+/* --- A Dance in the Deep --- */
 .theme-water {
     background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
     padding: 40px;
@@ -6,17 +32,17 @@
     border: 1px solid #4a7a8d;
 }
 
-/* SVG Wave Animation */
 @keyframes wave-drift {
     0% { transform: translateX(0); }
     50% { transform: translateX(-10px); }
     100% { transform: translateX(0); }
 }
+
 .wave-path {
     animation: wave-drift 4s infinite ease-in-out;
 }
 
-/* --- Ghost/Memory Theme --- */
+/* --- A Ghost Presence --- */
 .theme-ghost {
     background: linear-gradient(180deg, #1c1c1e, #292a2f, #1e2024);
     padding: 40px;
@@ -24,16 +50,45 @@
     border: 1px solid #4a4a55;
 }
 
-/* Fading, dashed line for the ghost visual */
-.ghost-path {
-    stroke-dasharray: 4 6; 
-    opacity: 0.6;
+@keyframes ghost-float {
+    0% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(-8px); opacity: 0.9; }
+    100% { transform: translateY(0); opacity: 0.5; }
 }
 
-/* --- Global Visual Tweaks --- */
-/* Keeps all SVGs centered and spaced properly */
-.poem-visual {
-    text-align: center;      
-    margin-bottom: 30px;     
-    opacity: 0.8;            
+.ghost-icon {
+    animation: ghost-float 4s infinite ease-in-out;
+    margin-bottom: 20px;
 }
+
+/* --- A Poem of Love's Grand Vision: The Crystal Ball --- */
+.theme-crystal {
+    background: linear-gradient(180deg, #1a1025, #2d1b4e, #180e22);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #5a3b8c;
+}
+
+/* Pulsing animation for the crystal's sparkle */
+@keyframes crystal-pulse {
+    0% { opacity: 0.3; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0.3; transform: scale(0.9); }
+}
+
+.crystal-sparkle {
+    animation: crystal-pulse 3s infinite ease-in-out;
+    transform-origin: 45px 40px; /* Centers the scaling on the star */
+}
+/* =========================================
+   2. POEMS - LETTER B
+========================================= */
+
+/* (Themes for 'B' poems will go here) */
+
+
+/* =========================================
+   3. POEMS - LETTER C
+========================================= */
+
+/* (Themes for 'C' poems will go here) */
