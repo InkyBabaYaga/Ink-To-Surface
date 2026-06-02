@@ -1,0 +1,42 @@
+/* --- visuals.css --- */
+/* A dedicated space for individual poem aesthetics, SVGs, and semantic design */
+
+/* --- Water Theme --- */
+.theme-water {
+    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #4a7a8d;
+}
+
+/* SVG Wave Animation */
+@keyframes wave-drift {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+.wave-path {
+    animation: wave-drift 4s infinite ease-in-out;
+}
+
+/* --- Ghost/Memory Theme --- */
+.theme-ghost {
+    background: linear-gradient(180deg, #1c1c1e, #292a2f, #1e2024);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #4a4a55;
+}
+
+/* Fading, dashed line for the ghost visual */
+.ghost-path {
+    stroke-dasharray: 4 6; 
+    opacity: 0.6;
+}
+
+/* --- Global Visual Tweaks --- */
+/* Keeps all SVGs centered and spaced properly */
+.poem-visual {
+    text-align: center;      
+    margin-bottom: 30px;     
+    opacity: 0.8;            
+}
