@@ -1,0 +1,53 @@
+ body {
+            background-color: #111;
+            color: #d1d1d1;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ink-header {
+            margin-top: 10vh;
+            text-align: center;
+        }
+        .ink-header h1 {
+            font-family: 'Garamond', serif;
+            font-size: 5rem;
+            color: #fff;
+            letter-spacing: 12px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            filter: blur(0.5px);
+            margin-bottom: 0;
+            transition: filter 0.5s ease;
+        }
+        .ink-header h1:hover {
+            filter: blur(0px);
+        }
+        .author-tag {
+            font-style: italic;
+            color: #888;
+            letter-spacing: 3px;
+        }
+        .intro-container {
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+            line-height: 1.8;
+            border-top: 1px solid #333;
+            margin-top: 40px;
+        }
+        .enter-btn {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 15px 40px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.6s ease;
+        }
+        .enter-btn:hover {
+            background-color: #fff;
+            color: #111;
+            letter-spacing: 5px;
+        }
