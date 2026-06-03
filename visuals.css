@@ -42,6 +42,24 @@
     animation: wave-drift 4s infinite ease-in-out;
 }
 
+/* --- Ambient Backgrounds for the Body --- */
+
+/* Cosmic Ocean: Deep water with faint stars/bioluminescence */
+.bg-cosmic-ocean {
+    background-color: #050914; /* The darkest ocean trench */
+    
+    background-image: 
+        /* Faint starlight/plankton scattered around the edges */
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.15) 1px, transparent 2px),
+        radial-gradient(circle at 90% 40%, rgba(255, 255, 255, 0.1) 1px, transparent 2px),
+        radial-gradient(circle at 15% 80%, rgba(138, 192, 219, 0.15) 2px, transparent 3px),
+        radial-gradient(circle at 85% 75%, rgba(255, 255, 255, 0.1) 1px, transparent 2px),
+        /* A very soft glow coming from the top center like moonlight hitting the water */
+        radial-gradient(ellipse at 50% 0%, rgba(32, 58, 67, 0.3) 0%, transparent 60%);
+        
+    /* Keeps the background perfectly still while the reader scrolls the poem */
+    background-attachment: fixed; 
+}
 /* --- A Ghost Presence --- */
 .theme-ghost {
     background: linear-gradient(180deg, #1c1c1e, #292a2f, #1e2024);
@@ -59,6 +77,21 @@
 .ghost-icon {
     animation: ghost-float 4s infinite ease-in-out;
     margin-bottom: 20px;
+}
+
+/* --- Dense Fog: Heavy mist banks for ghost themes --- */
+.bg-dense-fog {
+    background-color: #08080a; /* Pitch black/charcoal base */
+    
+    /* Layering massive, soft gray gradients to mimic thick mist banks */
+    background-image: 
+        radial-gradient(circle at 15% 40%, rgba(85, 90, 100, 0.25) 0%, transparent 55%),
+        radial-gradient(circle at 85% 30%, rgba(70, 75, 85, 0.3) 0%, transparent 60%),
+        radial-gradient(circle at 50% 85%, rgba(100, 105, 115, 0.2) 0%, transparent 65%),
+        radial-gradient(circle at 40% 10%, rgba(60, 65, 75, 0.2) 0%, transparent 50%);
+        
+    /* Keeps the fog banks locked in place behind the article */
+    background-attachment: fixed; 
 }
 
 /* --- A Poem of Love's Grand Vision: The Crystal Ball --- */
