@@ -9,7 +9,7 @@
     <title>A Ghost Presence | The Lexicon</title>
 </head>
 
-<body class="poem-page">
+<body class="poem-page bg-dense-fog">
 
     <!-- The article tag tells visuals.css to apply the ghost theme here -->
     <article id="a-ghost-presence" class="theme-ghost">
@@ -22,9 +22,14 @@
         </div>
 
         <!-- The SVG Visual Divider -->
+       <!-- Visual SVG Element: Floating Ghost -->
         <div class="poem-visual">
-            <svg viewBox="0 0 200 30" width="200" height="30" xmlns="http://www.w3.org/2000/svg">
-                <path class="ghost-path" d="M0,15 Q30,5 60,15 T140,15 T200,15" fill="none" stroke="#7a7a85" stroke-width="1.5" stroke-linecap="round"/>
+            <svg class="ghost-icon" viewBox="0 0 100 100" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                <!-- The Ghost's Body -->
+                <path d="M 30,90 C 30,40 40,20 50,20 C 60,20 70,40 70,90 Q 65,80 60,90 Q 55,80 50,90 Q 45,80 40,90 Q 35,80 30,90 Z" fill="none" stroke="#7a7a85" stroke-width="2.5" stroke-linejoin="round"/>
+                <!-- The Ghost's Eyes -->
+                <circle cx="43" cy="45" r="2.5" fill="#7a7a85"/>
+                <circle cx="57" cy="45" r="2.5" fill="#7a7a85"/>
             </svg>
         </div>
 
