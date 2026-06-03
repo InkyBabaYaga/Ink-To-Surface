@@ -19,14 +19,34 @@
             <p>Created: Jun. 9, 2022<br>Last modified: Jun. 26, 2022, 8:12</p>
         </div>
 
+       <!-- Visual SVG Element: Single 3D Pulsing Vine -->
         <div class="poem-visual">
-            <svg viewBox="0 0 200 40" width="200" height="40" xmlns="http://www.w3.org/2000/svg">
-                <g class="thorny-vine">
-                    <path d="M10,20 Q50,35 100,20 T190,20" fill="none" stroke="#5a5565" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M30,26 L35,32 L38,28" fill="none" stroke="#5a5565" stroke-width="1.5" stroke-linejoin="miter"/>
-                    <path d="M70,14 L75,8 L78,12" fill="none" stroke="#5a5565" stroke-width="1.5" stroke-linejoin="miter"/>
-                    <path d="M130,26 L135,32 L138,28" fill="none" stroke="#5a5565" stroke-width="1.5" stroke-linejoin="miter"/>
-                    <path d="M160,14 L165,8 L168,12" fill="none" stroke="#5a5565" stroke-width="1.5" stroke-linejoin="miter"/>
+            <svg viewBox="0 0 200 60" width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <!-- This gradient creates the 3D cylindrical lighting for the vine -->
+                    <linearGradient id="vine-3d" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#142b10" />   <!-- Dark shadow top -->
+                        <stop offset="40%" stop-color="#3c7a2e" />  <!-- Highlight middle -->
+                        <stop offset="60%" stop-color="#3c7a2e" />  <!-- Highlight middle -->
+                        <stop offset="100%" stop-color="#0a1708" /> <!-- Dark shadow bottom -->
+                    </linearGradient>
+                </defs>
+
+                <!-- The group that scales and pulses together -->
+                <g class="pulsing-vine-group">
+                    
+                    <!-- Single Thick 3D Vine -->
+                    <path d="M10,30 Q55,5 100,30 T190,30" fill="none" stroke="url(#vine-3d)" stroke-width="6" stroke-linecap="round"/>
+                    
+                    <!-- Blood Red Thorns -->
+                    <!-- Pointing Upwards (on the upper curves) -->
+                    <path d="M43,19 L48,5 L50,21 Z" fill="#9e0d0d" />
+                    <path d="M118,34 L123,20 L125,36 Z" fill="#9e0d0d" />
+                    
+                    <!-- Pointing Downwards (on the lower curves) -->
+                    <path d="M78,25 L83,38 L85,23 Z" fill="#9e0d0d" />
+                    <path d="M153,40 L158,54 L160,38 Z" fill="#9e0d0d" />
+                    
                 </g>
             </svg>
         </div>
