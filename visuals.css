@@ -493,24 +493,34 @@
     border-color: #737373;
     box-shadow: 0 0 20px rgba(115, 115, 115, 0.4);
 }
+
 .bg-fear-grid {
-    background: linear-gradient(to bottom, #0a0a0a, #111111);
+    /* Changed this to background-color so it doesn't fight the grid image! */
+    background-color: #0a0a0a; 
     background-image: 
         linear-gradient(rgba(115, 115, 115, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(115, 115, 115, 0.05) 1px, transparent 1px);
     background-size: 30px 30px;
     background-attachment: fixed;
 }
+
 .theme-fear {
-    /* No distinct background block mapped, so it uses standard layout styling */
+    /* Added the dark container box for the poem text */
+    background: linear-gradient(180deg, #151515, #1a1a1a, #111111);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #555555;
 }
+
 .theme-fear h1 { 
     color: #737373; 
     text-shadow: 0 0 15px rgba(115, 115, 115, 0.3); 
 }
+
 .cage-structure {
     animation: fear-tremble 3s infinite alternate ease-in-out;
 }
+
 @keyframes fear-tremble {
     0% { transform: translate(0, 0); stroke: #555555; }
     100% { transform: translate(1px, 1.5px); stroke: #737373; }
@@ -528,7 +538,10 @@
     background-attachment: fixed;
 }
 .theme-art {
-    /* No distinct background block mapped, so it uses standard layout styling */
+    background: linear-gradient(180deg, #1c0f24, #2a1538, #150a1b);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #7a2b53;
 }
 .theme-art h1 { 
     background: linear-gradient(45deg, #d13076, #f2a65a);
@@ -558,7 +571,10 @@
     background-attachment: fixed;
 }
 .theme-awakened {
-    /* No distinct background block mapped, so it uses standard layout styling */
+    background: linear-gradient(180deg, #1b120c, #2e1e12, #140d09);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #734a27;
 }
 .theme-awakened h1 { 
     color: #f2a65a; 
