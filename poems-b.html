@@ -1,44 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="skeleton.css">
     <link rel="stylesheet" href="transitions.css">
     <link rel="stylesheet" href="visuals.css">
     <title> B | The Lexicon</title>
+    
 </head>
 
 <body>
 
-<!-- THE A to B TRANSITION OVERLAY (Now with an ID!) -->
-<div id="transition-screen" class="transition-overlay">
+<a href="poems-a.html" class="side-nav side-nav-left">
+        <span class="nav-arrow">&#8592;</span>
+        <span class="nav-title">A section</span>
+    </a>
+
+<!-- THE A to B TRANSITION OVERLAY -->
+<div class="transition-overlay">
+    <!-- The track that slides -->
     <div class="camera-pan-track">
         <div class="block-a">A</div>
         <div class="block-b">B</div>
     </div>
+    
+    <!-- The fading welcome text -->
     <div class="welcome-text">Welcome to the B section</div>
 </div>
-
-<!-- YOUR B-SECTION PAGE CONTENT GOES HERE -->
-<!-- (Your header, poem list, and back to lexicon link) -->
-
-<!-- NEW: SIDE NAV TO GO BACK TO THE LAST "A" POEM -->
-<a href="a-warning-in-silence.html" class="side-nav side-nav-left">
-    <span class="nav-arrow">&#8592;</span>
-    <span class="nav-title">Previous Section</span>
-</a>
-
-<!-- THE JAVASCRIPT MAGIC -->
-<script>
-    // This checks the URL for our secret password: "?playTransition=true"
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // If the password is NOT in the URL, instantly hide the transition screen
-    if (!urlParams.has('playTransition')) {
-        document.getElementById('transition-screen').style.display = 'none';
-    }
-</script>
 
     <div class="header-container">
         <h1>B</h1>
@@ -47,53 +36,52 @@
     <div class="poem-list">
         
         <div class="poem-entry">
-    <a href="ballet-de-mariposas.html" class="poem-title">Ballet de mariposas</a>
-</div>
+            <a href="ballet-de-mariposas.html" class="poem-title">Ballet de mariposas</a>
+        </div>
 
-<div class="poem-entry">
-    <a href="batsheva-of-icehollow.html" class="poem-title">Batsheva Of IceHollow!</a>
-</div>
+        <div class="poem-entry">
+            <a href="batsheva-of-icehollow.html" class="poem-title">Batsheva Of IceHollow!</a>
+        </div>
 
-<div class="poem-entry">
-    <a href="battle-til-hearts-cease.html" class="poem-title">Battle ’til Hearts Cease</a>
-</div>
+        <div class="poem-entry">
+            <a href="battle-til-hearts-cease.html" class="poem-title">Battle ’til Hearts Cease</a>
+        </div>
 
-<div class="poem-entry">
-    <a href="beauty-of-selflessness.html" class="poem-title">Beauty of Selflessness</a>
-</div>
+        <div class="poem-entry">
+            <a href="beauty-of-selflessness.html" class="poem-title">Beauty of Selflessness</a>
+        </div>
 
-<div class="poem-entry">
-    <a href="belief-in-a-worthy-blessing.html" class="poem-title">Belief in a Worthy Blessing</a>
-</div>
+        <div class="poem-entry">
+            <a href="belief-in-a-worthy-blessing.html" class="poem-title">Belief in a Worthy Blessing</a>
+        </div>
 
-<div class="poem-entry">
-    <a href="betrayed-by-the-trusted.html" class="poem-title">Betrayed by the Trusted</a>
-</div>
+        <div class="poem-entry">
+            <a href="betrayed-by-the-trusted.html" class="poem-title">Betrayed by the Trusted</a>
+        </div>
 
-<div class="poem-entry">
-    <a href="betwixt-and-between.html" class="poem-title">Betwixt and Between</a>
-</div>
+        <div class="poem-entry">
+            <a href="betwixt-and-between.html" class="poem-title">Betwixt and Between</a>
+        </div>
 
-<div class="poem-entry">
-    <a href="birth-purpose-and-destiny.html" class="poem-title">Birth, Purpose, and Destiny</a>
-</div>
+        <div class="poem-entry">
+            <a href="birth-purpose-and-destiny.html" class="poem-title">Birth, Purpose, and Destiny</a>
+        </div>
 
-<div class="poem-entry">
-    <a href="blades-dancers-and-killers.html" class="poem-title">Blades, Dancers, and Killers</a>
-</div>
+        <div class="poem-entry">
+            <a href="blades-dancers-and-killers.html" class="poem-title">Blades, Dancers, and Killers</a>
+        </div>
 
-<div class="poem-entry">
-    <a href="blight-beneath-her-beauty.html" class="poem-title">Blight Beneath Her Beauty</a>
-</div>
+        <div class="poem-entry">
+            <a href="blight-beneath-her-beauty.html" class="poem-title">Blight Beneath Her Beauty</a>
+        </div>
 
-<div class="poem-entry">
-    <a href="bound-by-chains-of-twisted-affection.html" class="poem-title">Bound by Chains of Twisted Affection</a>
-</div>
+        <div class="poem-entry">
+            <a href="bound-by-chains-of-twisted-affection.html" class="poem-title">Bound by Chains of Twisted Affection</a>
+        </div>
 
-<div class="poem-entry">
-    <a href="broken-heart-in-the-tower.html" class="poem-title">Broken Heart in the Tower</a>
-</div>
-
+        <div class="poem-entry">
+            <a href="broken-heart-in-the-tower.html" class="poem-title">Broken Heart in the Tower</a>
+        </div>
 
     </div>
 
