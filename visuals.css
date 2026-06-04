@@ -10,7 +10,7 @@
 
 /* =========================================
    0. GLOBAL VISUAL TWEAKS
-   (Rules that apply to all SVG illustrations)
+   (Rules that apply globally to the UI)
 ========================================= */
 
 .poem-visual {
@@ -67,115 +67,13 @@
 .side-nav-left:hover .nav-title {
     max-width: 250px;
     opacity: 1;
-    margin-left: 15px; /* Pushes text away from the left arrow */
+    margin-left: 15px;
 }
 
 .side-nav-right:hover .nav-title {
     max-width: 250px;
     opacity: 1;
-    margin-right: 15px; /* Pushes text away from the right arrow */
-}
-
-/* --- THEME HOVER TRANSITIONS --- */
-/* These classes transition the button into a mini-preview of the next poem's theme */
-
-/* To Absent of Loss (Fading/Memory Theme) */
-.to-absent:hover {
-    background: linear-gradient(90deg, #111111, #1a1a1a);
-    border-color: #555555;
-    box-shadow: 0 0 20px rgba(150, 150, 150, 0.3); /* Soft, fading silver glow */
-}
-
-/* To Warning in Silence (Tense/Alert Theme) */
-.to-warning:hover {
-    background: linear-gradient(90deg, #0a0505, #140a0a);
-    border-color: #4a1515;
-    box-shadow: 0 0 20px rgba(139, 0, 0, 0.6); /* Deep, silent red glow */
-}
-
-/* To The Crystal Ball (Visions/Mystical Theme) */
-.to-crystal:hover {
-    background: linear-gradient(90deg, #0d0a1a, #161129);
-    border-color: #4b3b8c;
-    box-shadow: 0 0 20px rgba(123, 97, 255, 0.5); /* Ethereal purple/magenta glow */
-}
-
-/* To A Ghost Presence (Ethereal/Haunting Theme) */
-.to-ghost:hover {
-    background: linear-gradient(90deg, #0e1214, #151b1f);
-    border-color: #2a3b45;
-    box-shadow: 0 0 20px rgba(80, 120, 130, 0.4); /* Pale, haunting teal glow */
-}
-
-/* To A Dance in the Deep (Abyss/Oceanic Theme) */
-.to-dance:hover {
-    background: linear-gradient(90deg, #020813, #051024);
-    border-color: #103060;
-    box-shadow: 0 0 20px rgba(0, 100, 255, 0.4); /* Deep bioluminescent blue glow */
-}
-
-/* To Abusive Relationships (The Toxic Vine) */
-.to-toxic:hover {
-    background: linear-gradient(90deg, #18181c, #1f1f24);
-    border-color: #3a3545;
-    box-shadow: 0 0 20px rgba(139, 0, 0, 0.5); /* Red thorn glow */
-}
-
-/* To Adrift in Deceit (The Cold Ocean) */
-.to-adrift:hover {
-    background: linear-gradient(90deg, #11151c, #1a202c);
-    border-color: #2d3748;
-    box-shadow: 0 0 20px rgba(45, 55, 72, 0.5);
-}
-
-/* To Altered Destiny (The Shattered Prism) */
-.to-destiny:hover {
-    background: linear-gradient(90deg, #121212, #1d1b18);
-    border-color: #6b5a38;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); /* Gold glow */
-}
-
-/* To Ancestral Echoes (The Flowing Tree) */
-.to-ancestry:hover {
-    background: linear-gradient(90deg, #1a1e1b, #252a26);
-    border-color: #4a564d;
-    box-shadow: 0 0 20px rgba(74, 86, 77, 0.5); /* Sage glow */
-}
-
-.to-prince:hover {
-    background: linear-gradient(90deg, #0f1724, #162233);
-    border-color: #c28340;
-    box-shadow: 0 0 20px rgba(194, 131, 64, 0.5);
-}
-
-.to-android:hover {
-    background: linear-gradient(90deg, #141415, #1e1e20);
-    border-color: #55555a;
-    box-shadow: 0 0 20px rgba(85, 85, 90, 0.5);
-}
-
-.to-assassins:hover {
-    background: linear-gradient(90deg, #0d0d0d, #171717);
-    border-color: #e0e0e0;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-}
-
-.to-anxious:hover {
-    background: linear-gradient(90deg, #15181e, #1c212a);
-    border-color: #505f6e;
-    box-shadow: 0 0 20px rgba(80, 95, 110, 0.5);
-}
-
-.to-darkness:hover {
-    background: linear-gradient(90deg, #0a0a0a, #111111);
-    border-color: #333;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-}
-
-.to-aquatic:hover {
-    background: linear-gradient(90deg, #031326, #072140);
-    border-color: #00b4d8;
-    box-shadow: 0 0 20px rgba(0, 180, 216, 0.5);
+    margin-right: 15px;
 }
 
 /* Centered Bottom Navigation for Back Button */
@@ -190,160 +88,40 @@
    1. POEMS - LETTER A
 ========================================= */
 
-/* --- A Dance in the Deep --- */
-.theme-water {
-    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
-    padding: 40px;
-    border-radius: 8px;
-    border: 1px solid #4a7a8d;
+/* --- Absent of Loss: Family Will be Missed --- */
+.to-absent:hover {
+    background: linear-gradient(90deg, #111111, #1a1a1a);
+    border-color: #555555;
+    box-shadow: 0 0 20px rgba(150, 150, 150, 0.3);
 }
-
-@keyframes wave-drift {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-10px); }
-    100% { transform: translateX(0); }
-}
-
-.wave-path {
-    animation: wave-drift 4s infinite ease-in-out;
-}
-
-/* --- Ambient Backgrounds for the Body --- */
-
-/* Cosmic Ocean: Deep water with faint stars/bioluminescence */
-.bg-cosmic-ocean {
-    background-color: #050914; /* The darkest ocean trench */
-    
-    background-image: 
-        /* Faint starlight/plankton scattered around the edges */
-        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.15) 1px, transparent 2px),
-        radial-gradient(circle at 90% 40%, rgba(255, 255, 255, 0.1) 1px, transparent 2px),
-        radial-gradient(circle at 15% 80%, rgba(138, 192, 219, 0.15) 2px, transparent 3px),
-        radial-gradient(circle at 85% 75%, rgba(255, 255, 255, 0.1) 1px, transparent 2px),
-        /* A very soft glow coming from the top center like moonlight hitting the water */
-        radial-gradient(ellipse at 50% 0%, rgba(32, 58, 67, 0.3) 0%, transparent 60%);
-        
-    /* Keeps the background perfectly still while the reader scrolls the poem */
-    background-attachment: fixed; 
-}
-/* --- A Ghost Presence --- */
-.theme-ghost {
-    background: linear-gradient(180deg, #1c1c1e, #292a2f, #1e2024);
-    padding: 40px;
-    border-radius: 8px;
-    border: 1px solid #4a4a55;
-}
-
-@keyframes ghost-float {
-    0% { transform: translateY(0); opacity: 0.5; }
-    50% { transform: translateY(-8px); opacity: 0.9; }
-    100% { transform: translateY(0); opacity: 0.5; }
-}
-
-.ghost-icon {
-    animation: ghost-float 4s infinite ease-in-out;
-    margin-bottom: 20px;
-}
-
-/* --- Dense Fog: Heavy mist banks for ghost themes --- */
-.bg-dense-fog {
-    background-color: #08080a; /* Pitch black/charcoal base */
-    
-    /* Layering massive, soft gray gradients to mimic thick mist banks */
-    background-image: 
-        radial-gradient(circle at 15% 40%, rgba(85, 90, 100, 0.25) 0%, transparent 55%),
-        radial-gradient(circle at 85% 30%, rgba(70, 75, 85, 0.3) 0%, transparent 60%),
-        radial-gradient(circle at 50% 85%, rgba(100, 105, 115, 0.2) 0%, transparent 65%),
-        radial-gradient(circle at 40% 10%, rgba(60, 65, 75, 0.2) 0%, transparent 50%);
-        
-    /* Keeps the fog banks locked in place behind the article */
-    background-attachment: fixed; 
-}
-
-/* --- A Poem of Love's Grand Vision: The Crystal Ball --- */
-.theme-crystal {
-    background: linear-gradient(180deg, #1a1025, #2d1b4e, #180e22);
-    padding: 40px;
-    border-radius: 8px;
-    border: 1px solid #5a3b8c;
-}
-
-/* Pulsing animation for the crystal's sparkle */
-@keyframes crystal-pulse {
-    0% { opacity: 0.3; transform: scale(0.9); }
-    50% { opacity: 1; transform: scale(1.1); }
-    100% { opacity: 0.3; transform: scale(0.9); }
-}
-
-.crystal-sparkle {
-    animation: crystal-pulse 3s infinite ease-in-out;
-    transform-origin: 45px 40px; /* Centers the scaling on the star */
-}
-
-
-/* --- Ambient Backgrounds for the Body --- */
-
-/* Silent Tension: A heavy, dark vignette creating a feeling of oppressive pressure */
-.bg-silent-tension {
-    background-color: #030303; /* Pure darkness */
-    background-image: radial-gradient(circle at 50% 50%, #1a1a1d 0%, #000000 85%);
-    background-attachment: fixed;
-}
-
-
-/* --- A Warning in Silence --- */
-.theme-silence {
-    background: linear-gradient(180deg, #161618, #222226, #111112);
-    padding: 40px;
-    border-radius: 8px;
-    /* A sharp, slightly crimson-tinted border to hint at the "warning" */
-    border: 1px solid #4a3b3b; 
-}
-
-/* Sharp, sudden spike animation */
-@keyframes pulse-warning {
-    0% { stroke: #4a4a50; filter: drop-shadow(0 0 0px transparent); }
-    50% { stroke: #8b3a3a; filter: drop-shadow(0 0 4px #8b3a3a); } /* Pulses a dangerous red */
-    100% { stroke: #4a4a50; filter: drop-shadow(0 0 0px transparent); }
-}
-
-.warning-spike {
-    animation: pulse-warning 4s infinite ease-in-out;
-}
-
-/* --- Ambient Backgrounds for the Body --- */
-
-/* Memory Glow: A soft, warm, fading light in the darkness */
 .bg-memory-glow {
     background-color: #0a0809; 
     background-image: radial-gradient(circle at 50% 40%, rgba(189, 131, 88, 0.15) 0%, transparent 65%);
     background-attachment: fixed;
 }
-
-
-/* --- Absent of Loss: Family Will be Missed --- */
 .theme-family {
     background: linear-gradient(180deg, #1f1b20, #2a252b, #1a171c);
     padding: 40px;
     border-radius: 8px;
     border: 1px solid #5c4d58;
 }
-
-/* Gentle, warm flicker for the eternal flame */
 @keyframes flame-flicker {
     0% { transform: scale(1) translateY(0); opacity: 0.8; }
     50% { transform: scale(1.05) translateY(-3px); opacity: 1; filter: drop-shadow(0 0 5px #d4a373); }
     100% { transform: scale(1) translateY(0); opacity: 0.8; }
 }
-
 .eternal-flame {
     animation: flame-flicker 4s infinite ease-in-out;
     transform-origin: center bottom;
 }
 
-/* --- Ambient Backgrounds for the Body --- */
 
-/* Toxic Haze: A suffocating dark space with faint, bruised purple and olive tones */
+/* --- Abusive Relationships --- */
+.to-toxic:hover {
+    background: linear-gradient(90deg, #18181c, #1f1f24);
+    border-color: #3a3545;
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+}
 .bg-toxic-haze {
     background-color: #060608; 
     background-image: 
@@ -351,62 +129,122 @@
         radial-gradient(circle at 80% 20%, rgba(40, 50, 40, 0.1) 0%, transparent 50%);
     background-attachment: fixed;
 }
-
-
-/* --- Abusive Relationships --- */
 .theme-toxic {
     background: linear-gradient(180deg, #18181c, #1f1f24, #121215);
     padding: 40px;
     border-radius: 8px;
     border: 1px solid #3a3545; 
 }
-
-/* A heartbeat-like throb for the 3D vine and red thorns */
 @keyframes vine-throb {
     0% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(139, 0, 0, 0.3)); }
     15% { transform: scale(1.03); filter: drop-shadow(0 0 6px rgba(139, 0, 0, 0.7)); }
     30% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(139, 0, 0, 0.3)); }
     100% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(139, 0, 0, 0.3)); }
 }
-
 .pulsing-vine-group {
     animation: vine-throb 2s infinite ease-in-out;
     transform-origin: center;
 }
 
-/* --- Ambient Backgrounds for the Body --- */
 
-/* Adrift Darkness: A cold, isolating deep-sea/night sky gradient */
+/* --- A Dance in the Deep --- */
+.to-dance:hover {
+    background: linear-gradient(90deg, #020813, #051024);
+    border-color: #103060;
+    box-shadow: 0 0 20px rgba(0, 100, 255, 0.4);
+}
+.bg-cosmic-ocean {
+    background-color: #050914; 
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.15) 1px, transparent 2px),
+        radial-gradient(circle at 90% 40%, rgba(255, 255, 255, 0.1) 1px, transparent 2px),
+        radial-gradient(circle at 15% 80%, rgba(138, 192, 219, 0.15) 2px, transparent 3px),
+        radial-gradient(circle at 85% 75%, rgba(255, 255, 255, 0.1) 1px, transparent 2px),
+        radial-gradient(ellipse at 50% 0%, rgba(32, 58, 67, 0.3) 0%, transparent 60%);
+    background-attachment: fixed; 
+}
+.theme-water {
+    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #4a7a8d;
+}
+@keyframes wave-drift {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+.wave-path {
+    animation: wave-drift 4s infinite ease-in-out;
+}
+
+
+/* --- Adrift in Deceit --- */
+.to-adrift:hover {
+    background: linear-gradient(90deg, #11151c, #1a202c);
+    border-color: #2d3748;
+    box-shadow: 0 0 20px rgba(45, 55, 72, 0.5);
+}
 .bg-adrift-darkness {
     background-color: #040508; 
     background-image: radial-gradient(circle at 50% 20%, rgba(20, 30, 45, 0.5) 0%, transparent 75%);
     background-attachment: fixed;
 }
-
-
-/* --- Adrift in Deceit --- */
 .theme-adrift {
     background: linear-gradient(180deg, #11151c, #1a202c, #0d1015);
     padding: 40px;
     border-radius: 8px;
-    border: 1px solid #2d3748; /* Cold steel border */
+    border: 1px solid #2d3748;
 }
-
-/* Slow, unsteady sway imitating drifting at sea */
 @keyframes adrift-sway {
     0% { transform: rotate(-3deg) translateY(0); }
     50% { transform: rotate(4deg) translateY(3px); }
     100% { transform: rotate(-3deg) translateY(0); }
 }
-
 .broken-anchor {
     animation: adrift-sway 6s infinite ease-in-out;
     transform-origin: top center;
 }
 
-/* --- Ambient Backgrounds for the Body --- */
 
-/* Shifting Ethereal: A dynamic dark void with drifting light */
+/* --- A Ghost Presence --- */
+.to-ghost:hover {
+    background: linear-gradient(90deg, #0e1214, #151b1f);
+    border-color: #2a3b45;
+    box-shadow: 0 0 20px rgba(80, 120, 130, 0.4);
+}
+.bg-dense-fog {
+    background-color: #08080a;
+    background-image: 
+        radial-gradient(circle at 15% 40%, rgba(85, 90, 100, 0.25) 0%, transparent 55%),
+        radial-gradient(circle at 85% 30%, rgba(70, 75, 85, 0.3) 0%, transparent 60%),
+        radial-gradient(circle at 50% 85%, rgba(100, 105, 115, 0.2) 0%, transparent 65%),
+        radial-gradient(circle at 40% 10%, rgba(60, 65, 75, 0.2) 0%, transparent 50%);
+    background-attachment: fixed; 
+}
+.theme-ghost {
+    background: linear-gradient(180deg, #1c1c1e, #292a2f, #1e2024);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #4a4a55;
+}
+@keyframes ghost-float {
+    0% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(-8px); opacity: 0.9; }
+    100% { transform: translateY(0); opacity: 0.5; }
+}
+.ghost-icon {
+    animation: ghost-float 4s infinite ease-in-out;
+    margin-bottom: 20px;
+}
+
+
+/* --- Altered Destiny --- */
+.to-destiny:hover {
+    background: linear-gradient(90deg, #121212, #1d1b18);
+    border-color: #6b5a38;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
 .bg-shifting-ethereal {
     background-color: #050505;
     background-image: 
@@ -414,92 +252,67 @@
         radial-gradient(circle at 80% 70%, rgba(60, 50, 30, 0.2) 0%, transparent 50%);
     background-attachment: fixed;
 }
-
-
-/* --- Altered Destiny: Embracing the Unknown --- */
 .theme-destiny {
     background: linear-gradient(180deg, #121212, #1d1b18, #0e0e0e);
     padding: 40px;
     border-radius: 8px;
-    border: 1px solid #6b5a38; /* Faded gold border */
+    border: 1px solid #6b5a38;
 }
-
-/* Pulsing golden metamorphosis */
 @keyframes prism-glow {
     0% { opacity: 0.4; filter: drop-shadow(0 0 2px #d4af37); }
     50% { opacity: 1; filter: drop-shadow(0 0 10px #d4af37); }
     100% { opacity: 0.4; filter: drop-shadow(0 0 2px #d4af37); }
 }
-
 .shattered-prism {
     animation: prism-glow 3s infinite ease-in-out;
 }
 
-/* --- Ambient Backgrounds for the Body --- */
 
-/* Ancestral Flow: A deep, organic movement reminiscent of a dark, flowing river */
+/* --- Ancestral Echoes --- */
+.to-ancestry:hover {
+    background: linear-gradient(90deg, #1a1e1b, #252a26);
+    border-color: #4a564d;
+    box-shadow: 0 0 20px rgba(74, 86, 77, 0.5);
+}
 .bg-ancestral-flow {
     background-color: #0b0d0c;
     background-image: linear-gradient(135deg, rgba(20, 30, 25, 0.3) 0%, transparent 70%);
     background-attachment: fixed;
 }
-
-
-/* --- Ancestral Echoes --- */
 .theme-ancestry {
     background: linear-gradient(180deg, #1a1e1b, #252a26, #141715);
     padding: 40px;
     border-radius: 8px;
-    border: 1px solid #4a564d; /* Muted sage-toned border */
+    border: 1px solid #4a564d;
 }
-
-/* Gentle, organic swaying of the tree/river branches */
 @keyframes flow-sway {
     0% { transform: rotate(0deg); }
     50% { transform: rotate(1deg); }
     100% { transform: rotate(0deg); }
 }
-
 .ancestral-tree {
     animation: flow-sway 8s infinite ease-in-out;
     transform-origin: bottom center;
 }
 
-/* --- Ambient Backgrounds for the Body --- */
 
-/* Stormy Ebb: Dark ocean depths with a faint, warm sunrise glow at the bottom */
+/* --- Anchored in Love --- */
+.to-prince:hover {
+    background: linear-gradient(90deg, #0f1724, #162233);
+    border-color: #c28340;
+    box-shadow: 0 0 20px rgba(194, 131, 64, 0.5);
+}
 .bg-stormy-ebb {
     background-color: #050a12;
     background-image: radial-gradient(circle at 50% 100%, rgba(180, 100, 50, 0.15) 0%, transparent 60%);
     background-attachment: fixed;
 }
-
-/* Mechanical Void: A cold, monotonous grid representing android life */
-.bg-mechanical-void {
-    background-color: #0a0a0c;
-    background-image: 
-        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(255,255,255,0.03) 20px), 
-        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(255,255,255,0.03) 20px);
-    background-attachment: fixed;
-}
-
-/* Divine Crackle: Pitch black with a stark, blinding white light from above */
-.bg-divine-crackle {
-    background-color: #030303;
-    background-image: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
-    background-attachment: fixed;
-}
-
-/* --- POEM THEMES --- */
-
-/* Anchored in Love */
 .theme-prince {
     background: linear-gradient(180deg, #0f1724, #162233, #0b111a);
     padding: 40px;
     border-radius: 8px;
-    border: 1px solid #c28340; /* Golden sunrise border */
+    border: 1px solid #c28340;
 }
-
 @keyframes anchor-warmth {
     0% { filter: drop-shadow(0 0 2px rgba(194, 131, 64, 0.2)); transform: translateY(0); }
     50% { filter: drop-shadow(0 0 10px rgba(194, 131, 64, 0.8)); transform: translateY(-4px); }
@@ -509,14 +322,26 @@
     animation: anchor-warmth 4s infinite ease-in-out;
 }
 
-/* Androids Wish */
+
+/* --- Androids Wish --- */
+.to-android:hover {
+    background: linear-gradient(90deg, #141415, #1e1e20);
+    border-color: #55555a;
+    box-shadow: 0 0 20px rgba(85, 85, 90, 0.5);
+}
+.bg-mechanical-void {
+    background-color: #0a0a0c;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(255,255,255,0.03) 20px), 
+        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(255,255,255,0.03) 20px);
+    background-attachment: fixed;
+}
 .theme-android {
     background: linear-gradient(180deg, #141415, #1e1e20, #111112);
     padding: 40px;
     border-radius: 8px;
-    border: 1px solid #55555a; /* Cold steel border */
+    border: 1px solid #55555a;
 }
-
 @keyframes coin-drop {
     0% { transform: translateY(-15px); opacity: 0; }
     20% { transform: translateY(0); opacity: 1; }
@@ -527,14 +352,24 @@
     animation: coin-drop 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Angel Assassins */
+
+/* --- Angel Assassins --- */
+.to-assassins:hover {
+    background: linear-gradient(90deg, #0d0d0d, #171717);
+    border-color: #e0e0e0;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+.bg-divine-crackle {
+    background-color: #030303;
+    background-image: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
+    background-attachment: fixed;
+}
 .theme-assassin {
     background: linear-gradient(180deg, #0d0d0d, #171717, #050505);
     padding: 40px;
     border-radius: 8px;
-    border: 1px solid #e0e0e0; /* Stark white border */
+    border: 1px solid #e0e0e0;
 }
-
 @keyframes divine-flicker {
     0% { filter: drop-shadow(0 0 2px #ffffff); opacity: 0.8; }
     5% { filter: drop-shadow(0 0 15px #ffffff); opacity: 1; }
@@ -545,40 +380,24 @@
     animation: divine-flicker 5s infinite;
 }
 
-/* --- Ambient Backgrounds for the Body --- */
 
-/* Anxious Swirl: A subtle, tight radial gradient representing swirling thoughts */
+/* --- Anxious Attachments --- */
+.to-anxious:hover {
+    background: linear-gradient(90deg, #15181e, #1c212a);
+    border-color: #505f6e;
+    box-shadow: 0 0 20px rgba(80, 95, 110, 0.5);
+}
 .bg-anxious-swirl {
     background-color: #0c0e12;
     background-image: repeating-radial-gradient(circle at 50% 50%, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 10px, transparent 10px, transparent 20px);
     background-attachment: fixed;
 }
-
-/* Abyss of Darkness: Pitch black with a very faint, distant light of hope at the bottom */
-.bg-dark-abyss {
-    background-color: #020202;
-    background-image: radial-gradient(circle at 50% 120%, rgba(200, 200, 200, 0.1) 0%, transparent 50%);
-    background-attachment: fixed;
-}
-
-/* Bioluminescent Tide: Deep ocean water with a glowing cyan hue */
-.bg-bioluminescent-tide {
-    background-color: #010a15;
-    background-image: radial-gradient(ellipse at 50% 50%, rgba(0, 180, 216, 0.15) 0%, transparent 70%);
-    background-attachment: fixed;
-}
-
-
-/* --- POEM THEMES --- */
-
-/* Anxious Attachments */
 .theme-anxious {
     background: linear-gradient(180deg, #15181e, #1c212a, #101217);
     padding: 40px;
     border-radius: 8px;
-    border: 1px solid #505f6e; /* Muted anxiety blue/grey */
+    border: 1px solid #505f6e;
 }
-
 @keyframes anxious-vibrate {
     0% { transform: translate(0, 0) scale(1); opacity: 0.8; }
     25% { transform: translate(1px, -1px) scale(1.01); opacity: 1; }
@@ -590,14 +409,47 @@
     animation: anxious-vibrate 0.3s infinite linear;
 }
 
-/* Appeal of Darkness */
+
+/* --- A Poem of Love's Grand Vision (The Crystal Ball) --- */
+.to-crystal:hover {
+    background: linear-gradient(90deg, #0d0a1a, #161129);
+    border-color: #4b3b8c;
+    box-shadow: 0 0 20px rgba(123, 97, 255, 0.5);
+}
+.theme-crystal {
+    background: linear-gradient(180deg, #1a1025, #2d1b4e, #180e22);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #5a3b8c;
+}
+@keyframes crystal-pulse {
+    0% { opacity: 0.3; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0.3; transform: scale(0.9); }
+}
+.crystal-sparkle {
+    animation: crystal-pulse 3s infinite ease-in-out;
+    transform-origin: 45px 40px;
+}
+
+
+/* --- Appeal of Darkness --- */
+.to-darkness:hover {
+    background: linear-gradient(90deg, #0a0a0a, #111111);
+    border-color: #333;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+.bg-dark-abyss {
+    background-color: #020202;
+    background-image: radial-gradient(circle at 50% 120%, rgba(200, 200, 200, 0.1) 0%, transparent 50%);
+    background-attachment: fixed;
+}
 .theme-darkness {
     background: linear-gradient(180deg, #0a0a0a, #111111, #050505);
     padding: 40px;
     border-radius: 8px;
     border: 1px solid #222;
 }
-
 @keyframes fragile-hope {
     0% { opacity: 0.2; filter: drop-shadow(0 0 2px #fff); }
     50% { opacity: 1; filter: drop-shadow(0 0 12px #fff); }
@@ -607,14 +459,24 @@
     animation: fragile-hope 6s infinite ease-in-out;
 }
 
-/* Aquatic Rendezvous */
+
+/* --- Aquatic Rendezvous --- */
+.to-aquatic:hover {
+    background: linear-gradient(90deg, #031326, #072140);
+    border-color: #00b4d8;
+    box-shadow: 0 0 20px rgba(0, 180, 216, 0.5);
+}
+.bg-bioluminescent-tide {
+    background-color: #010a15;
+    background-image: radial-gradient(ellipse at 50% 50%, rgba(0, 180, 216, 0.15) 0%, transparent 70%);
+    background-attachment: fixed;
+}
 .theme-aquatic {
     background: linear-gradient(180deg, #031326, #072140, #020d1a);
     padding: 40px;
     border-radius: 8px;
     border: 1px solid #005f8a;
 }
-
 @keyframes tide-flow {
     0% { transform: translateX(-5px) translateY(0); }
     50% { transform: translateX(5px) translateY(-3px); }
@@ -623,6 +485,122 @@
 .swirling-tide {
     animation: tide-flow 4s infinite ease-in-out;
 }
+
+
+/* --- Architecture of Fear --- */
+.to-fear:hover {
+    background: linear-gradient(90deg, #151515, #222222);
+    border-color: #737373;
+    box-shadow: 0 0 20px rgba(115, 115, 115, 0.4);
+}
+.bg-fear-grid {
+    background: linear-gradient(to bottom, #0a0a0a, #111111);
+    background-image: 
+        linear-gradient(rgba(115, 115, 115, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(115, 115, 115, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-attachment: fixed;
+}
+.theme-fear {
+    /* No distinct background block mapped, so it uses standard layout styling */
+}
+.theme-fear h1 { 
+    color: #737373; 
+    text-shadow: 0 0 15px rgba(115, 115, 115, 0.3); 
+}
+.cage-structure {
+    animation: fear-tremble 3s infinite alternate ease-in-out;
+}
+@keyframes fear-tremble {
+    0% { transform: translate(0, 0); stroke: #555555; }
+    100% { transform: translate(1px, 1.5px); stroke: #737373; }
+}
+
+
+/* --- ART VS Expectations --- */
+.to-art:hover {
+    background: linear-gradient(90deg, #1c0f24, #2a1538);
+    border-color: #d13076;
+    box-shadow: 0 0 20px rgba(209, 48, 118, 0.5); 
+}
+.bg-art-canvas {
+    background: linear-gradient(135deg, #120a17 0%, #1a0d22 100%);
+    background-attachment: fixed;
+}
+.theme-art {
+    /* No distinct background block mapped, so it uses standard layout styling */
+}
+.theme-art h1 { 
+    background: linear-gradient(45deg, #d13076, #f2a65a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(209, 48, 118, 0.3);
+}
+.creative-stroke {
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    animation: paint-stroke 4s infinite alternate ease-in-out;
+}
+@keyframes paint-stroke {
+    0% { stroke-dashoffset: 120; }
+    100% { stroke-dashoffset: 0; }
+}
+
+
+/* --- Awakened by Love --- */
+.to-awakened:hover {
+    background: linear-gradient(90deg, #1b120c, #2e1e12);
+    border-color: #f2a65a;
+    box-shadow: 0 0 20px rgba(242, 166, 90, 0.5);
+}
+.bg-warm-night {
+    background: linear-gradient(to bottom, #0f0a07, #1c110a);
+    background-attachment: fixed;
+}
+.theme-awakened {
+    /* No distinct background block mapped, so it uses standard layout styling */
+}
+.theme-awakened h1 { 
+    color: #f2a65a; 
+    text-shadow: 0 0 20px rgba(242, 166, 90, 0.5); 
+}
+.pulsing-starlight {
+    transform-origin: center;
+    animation: starlight-breathe 4s infinite alternate ease-in-out;
+}
+@keyframes starlight-breathe {
+    0% { transform: scale(0.9); opacity: 0.5; }
+    100% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 8px #f2a65a); }
+}
+
+
+/* --- A Warning in Silence --- */
+.to-warning:hover {
+    background: linear-gradient(90deg, #0a0505, #140a0a);
+    border-color: #4a1515;
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
+}
+.bg-silent-tension {
+    background-color: #030303; 
+    background-image: radial-gradient(circle at 50% 50%, #1a1a1d 0%, #000000 85%);
+    background-attachment: fixed;
+}
+.theme-silence {
+    background: linear-gradient(180deg, #161618, #222226, #111112);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #4a3b3b; 
+}
+@keyframes pulse-warning {
+    0% { stroke: #4a4a50; filter: drop-shadow(0 0 0px transparent); }
+    50% { stroke: #8b3a3a; filter: drop-shadow(0 0 4px #8b3a3a); } 
+    100% { stroke: #4a4a50; filter: drop-shadow(0 0 0px transparent); }
+}
+.warning-spike {
+    animation: pulse-warning 4s infinite ease-in-out;
+}
+
+
 /* =========================================
    2. POEMS - LETTER B
 ========================================= */
