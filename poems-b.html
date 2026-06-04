@@ -11,17 +11,34 @@
 
 <body>
 
-<!-- THE A to B TRANSITION OVERLAY -->
-<div class="transition-overlay">
-    <!-- The track that slides -->
+<!-- THE A to B TRANSITION OVERLAY (Now with an ID!) -->
+<div id="transition-screen" class="transition-overlay">
     <div class="camera-pan-track">
         <div class="block-a">A</div>
         <div class="block-b">B</div>
     </div>
-    
-    <!-- The fading welcome text -->
     <div class="welcome-text">Welcome to the B section</div>
 </div>
+
+<!-- YOUR B-SECTION PAGE CONTENT GOES HERE -->
+<!-- (Your header, poem list, and back to lexicon link) -->
+
+<!-- NEW: SIDE NAV TO GO BACK TO THE LAST "A" POEM -->
+<a href="a-warning-in-silence.html" class="side-nav side-nav-left">
+    <span class="nav-arrow">&#8592;</span>
+    <span class="nav-title">Previous Section</span>
+</a>
+
+<!-- THE JAVASCRIPT MAGIC -->
+<script>
+    // This checks the URL for our secret password: "?playTransition=true"
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // If the password is NOT in the URL, instantly hide the transition screen
+    if (!urlParams.has('playTransition')) {
+        document.getElementById('transition-screen').style.display = 'none';
+    }
+</script>
 
     <div class="header-container">
         <h1>B</h1>
