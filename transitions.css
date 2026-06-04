@@ -1,0 +1,86 @@
+/* =========================================
+   SECTION TRANSITIONS (A to B)
+========================================= */
+
+/* The full-screen overlay that holds the animation */
+.transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #050505;
+    z-index: 9999;
+    overflow: hidden;
+    /* This hides the overlay completely after the animation finishes so you can interact with the page */
+    animation: remove-overlay 0s linear 4.5s forwards; 
+}
+
+/* The wide track that holds both A and B, sliding to the left */
+.camera-pan-track {
+    display: flex;
+    width: 200vw; /* Twice the width of the screen to hold both blocks */
+    height: 100vh;
+    /* Pauses for a half second, then slides left for 1.5 seconds smoothly */
+    animation: slide-left 1.5s cubic-bezier(0.25, 1, 0.5, 1) 0.5s forwards;
+}
+
+/* The individual blocks */
+.block-a, .block-b {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15rem;
+    font-family: serif;
+    font-weight: bold;
+}
+
+/* Styling the A block to look like what we just left */
+.block-a {
+    color: rgba(255, 255, 255, 0.05);
+    background-image: 
+        linear-gradient(rgba(115, 115, 115, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(115, 115, 115, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+/* Styling the B block as the new destination */
+.block-b {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* The fading text at the bottom */
+.welcome-text {
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #e0e0e0;
+    opacity: 0;
+    /* Waits until the pan is fully locked (2.5s total), then fades up smoothly */
+    animation: fade-in-up 1.5s ease-out 2.2s forwards;
+}
+
+/* --- ANIMATION KEYFRAMES --- */
+@keyframes slide-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100vw); }
+}
+
+@keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes remove-overlay {
+    to { 
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
